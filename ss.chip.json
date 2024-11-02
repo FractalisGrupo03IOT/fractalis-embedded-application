@@ -1,0 +1,11 @@
+{
+  "name": "ss",
+  "author": "",
+  "pins": [
+    "VCC",
+    "GND",
+    "IN",
+    "OUT"
+  ],
+  "controls": []
+}

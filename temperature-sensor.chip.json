@@ -1,0 +1,21 @@
+{
+  "name": "temperature-sensor",
+  "author": "",
+  "pins": [
+    "VCC",
+    "GND",
+    "A0",
+    "",
+    ""
+  ],
+  "controls": [
+     {
+      "id": "temperature",
+      "label": "Temperature (°C)",
+      "type": "range",
+      "min": -40,
+      "max": 125,
+      "step": 1
+    }
+  ]
+}

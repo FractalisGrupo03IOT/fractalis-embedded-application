@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 4.7, "left": 14.2, "attrs": {} },
+    {
+      "type": "chip-temperature-sensor",
+      "id": "temperature",
+      "top": -56.58,
+      "left": -283.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 209.2,
+      "left": 384,
+      "attrs": { "horn": "single", "hornColor": "#000088" }
+    },
+    { "type": "chip-humidity-sensor", "id": "humidity", "top": 1.02, "left": -225.6, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr", "top": -160, "left": -56.8, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 275.2,
+      "left": -23.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "temperature:VCC", "red", [ "h9.3", "v48", "h-451.2", "v-259.2" ] ],
+    [ "esp:GND.1", "temperature:GND", "black", [ "h18.9", "v47.9", "h-451.2", "v-240" ] ],
+    [ "esp:D34", "temperature:A0", "green", [ "h-9.6", "v134.2", "h-316.8", "v-220.8" ] ],
+    [ "esp:3V3", "humidity:VCC", "red", [ "h-182.7", "v-48", "h-192", "v-105.6" ] ],
+    [ "esp:GND.1", "humidity:GND", "black", [ "h18.9", "v-57.7", "h-384", "v-76.8" ] ],
+    [ "esp:D33", "humidity:A0", "green", [ "h-259.2", "v-57.6" ] ],
+    [ "ldr:VCC", "esp:3V3", "red", [ "h28.8", "v57.6" ] ],
+    [ "ldr:GND", "esp:GND.2", "black", [ "h19.2", "v114.8", "h-384", "v-76.7" ] ],
+    [ "ldr:AO", "esp:D32", "green", [ "h9.6", "v66.5", "h-384", "v124.9" ] ],
+    [ "esp:3V3", "lcd:VCC", "red", [ "h38.1", "v86.4", "h-201.6", "v57.5" ] ],
+    [ "esp:GND.1", "lcd:GND", "black", [ "h28.5", "v86.3", "h-181.8", "v57.6" ] ],
+    [ "esp:D21", "lcd:SDA", "green", [ "h9.3", "v-77.2", "h-181.8", "v326.2" ] ],
+    [ "esp:D22", "lcd:SCL", "green", [ "h18.9", "v-57.9", "h-201", "v345.3" ] ],
+    [ "servo1:PWM", "esp:D25", "green", [ "h12", "v12" ] ],
+    [ "servo1:V+", "esp:3V3", "red", [ "h20", "v-163.1", "h-346.1" ] ],
+    [ "servo1:GND", "esp:GND", "black", [ "h20", "v60" ] ]
+  ],
+  "dependencies": {}
+}

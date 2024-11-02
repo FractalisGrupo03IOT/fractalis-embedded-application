@@ -1,0 +1,21 @@
+{
+  "name": "humidity-sensor",
+  "author": "",
+  "pins": [
+    "VCC",
+    "GND",
+    "A0",
+    "",
+    ""
+  ],
+  "controls": [
+    {
+      "id": "humidity",
+      "label": "Humidity (%)",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  ]
+}
