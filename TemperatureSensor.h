@@ -6,7 +6,7 @@
 class TemperatureSensor {
   public:
     TemperatureSensor(uint8_t pin);
-    void begin();
+    void begin();  
     float readTemperature();
     
   private:
