@@ -7,7 +7,7 @@ void HumiditySensor::begin() {
 }
 
 float HumiditySensor::readHumidity() {
-  int analogValue = analogRead(sensorPin);
+  int analogValue = analogRead(sensorPin);  
   float voltage = analogValue * (3.3 / 4095.0);
   float humidity = voltage * (100.0 / 3.3);
   return humidity;
