@@ -7,7 +7,7 @@
 #include "SunlightSensor.h"
 #include <LiquidCrystal_I2C.h>
 
-class Crop {
+class Crop {  
   public:
     Crop(int id, uint8_t tempPin, uint8_t humPin, uint8_t sunPin, uint8_t lcdAddr);
     void begin();
