@@ -17,6 +17,7 @@
 #define SERVO_PIN 25
 #define I2C_ADDR 0x27
 
+// crea cultivo con sus sensores
 Crop crop(4, TEMP_SENSOR_PIN, HUM_SENSOR_PIN, SUN_SENSOR_PIN, I2C_ADDR);
 Servo myServo;
 

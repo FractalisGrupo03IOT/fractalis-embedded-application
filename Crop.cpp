@@ -13,7 +13,9 @@ void Crop::begin() {
 
 void Crop::updateSensors() {
   temperature = tempSensor.readTemperature();
+  
   humidity = humSensor.readHumidity();
+  
   sunlight = sunSensor.readSunlight();
 }
 
